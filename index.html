@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trà xinh gái </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <section id="start-overlay" aria-label="Start screen">
+    <div id="start-card">
+      <h1>Hai Tra</h1>
+      <img id="start-gif" src="assets/bear-friends.png" alt="Two encouraging bears">
+      <p>Click to start</p>
+      <button id="start-button" type="button">Start</button>
+    </div>
+  </section>
+
+  <section id="message-overlay" aria-hidden="true">
+    <article id="message-card">
+      <div id="message-image-wrap">
+        <img id="message-image-bg" src="" alt="">
+        <img id="message-image" src="" alt="">
+      </div>
+      <h2 id="message-title"></h2>
+      <p id="message-text"></p>
+      <button id="message-close" type="button">Close</button>
+    </article>
+  </section>
+
+  <div class="fullscreen-control">
+    <button id="fullscreen-btn" class="round-btn" type="button" aria-label="Fullscreen">
+      <svg id="fullscreen-enter" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 5h6v2H7v4H5V5zm12 0h2v6h-2V7h-4V5h4zM5 13h2v4h4v2H5v-6zm12 4v-4h2v6h-6v-2h4z"/>
+      </svg>
+      <svg id="fullscreen-exit" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8 3v5H3M16 3v5h5M8 21v-5H3M16 21v-5h5"/>
+      </svg>
+    </button>
+  </div>
+
+  <div id="music-control" class="music-control">
+    <button id="music-btn" class="round-btn" type="button" aria-label="Music">
+      <svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 19h4V5H6zm8-14v14h4V5z"/></svg>
+    </button>
+    <div id="volume-box">
+      <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.5" aria-label="Volume">
+    </div>
+  </div>
+
+  <audio id="background-music" loop preload="auto">
+    <source src="nhac.mp3" type="audio/mpeg">
+    
+  </audio>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
